@@ -1,6 +1,8 @@
 APP_NAME=walp
 APP_AUTHOR=rhean
-COLLECTIONS_FILE_NAME=collections.json
-COLLECTIONS_DIR_NAME=collections
-PRESETS_FILE_NAME=presets.json
-PRESETS_DIR_NAME=presets
+COLLECTIONS_FILE=collections.json
+COLLECTIONS_DIR=collections
+PRESETS_FILE=presets.json
+PRESETS_DIR=presets
+IMAGES_DIR=images
+STATE_FILE=state.json

@@ -1,6 +1,6 @@
 import click
-from walp.scripts.collection import list_collections
-from walp.utils import storage
+import walp.scripts.collection as col
+import walp.scripts.state as state
 
 
 @click.group()
@@ -10,7 +10,13 @@ def cli():
 
 @cli.command(name="status")
 def showStatus():
-    click.echo("active")
+    s = state.getState()
+    if s["current"] == "none":
+        click.echo("Status: Inactive")
+    else:
+        click.echo(f"Using {s['type']} '{s['current']}'")
+
+
 
 
 # Group for collection interface commands
@@ -21,7 +27,13 @@ def collection():
 
 @collection.command(name="list")
 def collection_list():
-    for i in list_collections():
+    collections = col.list_collections()
+
+    if len(collections) < 1:
+        click.echo("No collections found!\n\nUse: walp collection create [NAME]\n to create a new collection.")
+        return
+
+    for i in collections:
         click.echo(i)
 
 
