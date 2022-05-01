@@ -8,7 +8,7 @@ import os
 def importImage(rawpath):
     coolpath = Path(rawpath)
     if coolpath.is_dir():
-        return handledir(coolpath)
+        return 1
     else:
         return handleimg(coolpath)
 

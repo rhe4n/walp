@@ -18,12 +18,13 @@ def showStatus():
 
 
 @cli.command(name="import")
-@click.argument("input", type=click.Path(exists=True))
+@click.argument("input", type=click.Path(exists=True), nargs=-1)
 def importFileOrDir(input):
-    if img.importImage(input) > 0:
-        click.echo("Some input files were not images.")
-    else:
-        click.echo("Wallpaper loaded correctly.")
+    for image in input:
+        if img.importImage(image) > 0:
+            click.echo("Not imported (not an image)")
+        else:
+            click.echo("Wallpaper loaded correctly.")
 
 
 # Group for collection interface commands
