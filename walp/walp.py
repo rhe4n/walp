@@ -1,15 +1,12 @@
-"""
-                .__
-__  _  _______  |  | ______
-\ \/ \/ /\__  \ |  | \____ \
- \     /  / __ \|  |_|  |_> >
-  \/\_/  (____  /____/   __/
-              \/     |__|
-
-W.A.L.P.
-"""
 import click
 
-@click.command("collection")
+
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
 def collection():
-    click.echo("collection!")
+    print("collection list")
+

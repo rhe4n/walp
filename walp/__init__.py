@@ -1,4 +1,4 @@
+from . import walp
+
 def main():
-    """Entry point"""
-    print("hello world!")
-    pass
+    walp.cli()

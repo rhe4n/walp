@@ -14,7 +14,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "walp = walp:collection",
+            "walp = walp:main",
         ],
     },
 )
