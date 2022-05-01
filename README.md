@@ -2,4 +2,6 @@
 
 ### a command line wallpaper manager
 
-lorem ipsum
+## usage
+
+walp --help shows available commands
