@@ -2,9 +2,15 @@ import click
 from walp.scripts.collection import list_collections
 from walp.utils import storage
 
+
 @click.group()
 def cli():
-    storage.init()
+    pass
+
+
+@cli.command(name="status")
+def showStatus():
+    click.echo("active")
 
 
 # Group for collection interface commands
