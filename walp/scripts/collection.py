@@ -1,5 +1,4 @@
 from walp.utils import storage
-import json
 
 
 class Collection(object):
@@ -32,4 +31,24 @@ def create_collection(name):
     storage.saveCollections(collection_list)
 
     return 0
+
+
+def delete_collection(name):
+    collection_list = storage.loadCollections()
+
+    amount = 0
+    for i in range(len(collection_list)-1):
+        if collection_list[i]["name"] == name:
+            del collection_list[i]
+            amount += 1
+
+    if amount == 0:
+        return 1
+    elif amount > 1:
+        return 2
+
+    storage.saveCollections(collection_list)
+
+    if amount == 1:
+        return 0
 

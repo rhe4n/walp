@@ -34,6 +34,17 @@ def collection():
     pass
 
 
+@collection.command(name="delete")
+@click.argument("collection_name")
+def collection_delete(collection_name):
+    res = col.delete_collection(collection_name)
+    if res == 0:
+        click.echo(f"Collection {collection_name} deleted successfully.")
+    elif res == 1:
+        click.echo("Collection could not be deleted (not found).")
+    else:
+        click.echo("Collection could not be created (problem unknown)")
+
 @collection.command(name="list")
 def collection_list():
     collections = col.list_collection_names()
