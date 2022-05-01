@@ -3,6 +3,7 @@ from . import parser
 from pathlib import Path
 import os
 import json
+import shutil
 
 tree_structure = parser.parseKeyValue(Path(__file__).parent.parent.resolve() / "dirs.dat")
 data_dir = user_data_dir(tree_structure["APP_NAME"], tree_structure["APP_AUTHOR"])
@@ -63,3 +64,7 @@ def loadState():
 
 def loadPresets():
     return loadJSONData(presets_file_path)
+
+
+def saveImage(sourcePath, newFileName):
+    shutil.copy(sourcePath, images_dir_path / newFileName)

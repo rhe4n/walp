@@ -11,7 +11,8 @@ setup(
     packages=["walp"],
     install_requires=[
         "click>=8.0.3",
-        "appdirs>=1.4.4"
+        "appdirs>=1.4.4",
+        "pillow>=9.1.0"
     ],
     entry_points={
         "console_scripts": [

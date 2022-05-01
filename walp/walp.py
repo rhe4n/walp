@@ -1,7 +1,7 @@
 import click
 import walp.scripts.collection as col
 import walp.scripts.state as state
-
+import walp.scripts.image as img
 
 @click.group()
 def cli():
@@ -17,6 +17,13 @@ def showStatus():
         click.echo(f"Using {s['type']} '{s['current']}'")
 
 
+@cli.command(name="import")
+@click.argument("input", type=click.Path(exists=True))
+def importFileOrDir(input):
+    if img.importImage(input) > 0:
+        click.echo("Some input files were not images.")
+    else:
+        click.echo("Wallpaper loaded correctly.")
 
 
 # Group for collection interface commands
