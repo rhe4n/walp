@@ -7,7 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 
-walp/__pycache__/
+**/__pycache__/
 .idea/
 build/
 walp.egg-info

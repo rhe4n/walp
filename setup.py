@@ -10,11 +10,15 @@ setup(
     author_email="rheandhont@gmail.com",
     packages=["walp"],
     install_requires=[
-        "Click>=8.0.3",
+        "click>=8.0.3",
+        "appdirs>=1.4.4"
     ],
     entry_points={
         "console_scripts": [
             "walp = walp:main",
         ],
     },
+    package_data={
+        "walp": ["dirs.dat"]
+    }
 )
