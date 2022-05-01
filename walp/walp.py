@@ -3,6 +3,7 @@ import walp.scripts.collection as col
 import walp.scripts.state as state
 import walp.scripts.image as img
 
+
 @click.group()
 def cli():
     pass
@@ -35,7 +36,7 @@ def collection():
 
 @collection.command(name="list")
 def collection_list():
-    collections = col.list_collections()
+    collections = col.list_collection_names()
 
     if len(collections) < 1:
         click.echo("No collections found!\n\nUse: walp collection create [NAME]\n to create a new collection.")
@@ -45,11 +46,16 @@ def collection_list():
         click.echo(i)
 
 
-
 @collection.command(name="create")
 @click.argument('collection_name')
 def collection_create(collection_name):
-    print(f"creating collection {collection_name}")
+    res = col.create_collection(collection_name)
+    if res == 0:
+        click.echo(f"New collection {collection_name} created successfully.")
+    elif res == 1:
+        click.echo("Collection could not be created. A collection with the same name already exists.")
+    else:
+        click.echo("Collection could not be created (problem unknown)")
 
 
 @collection.command(name="add")

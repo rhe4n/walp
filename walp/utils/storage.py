@@ -68,3 +68,8 @@ def loadPresets():
 
 def saveImage(sourcePath, newFileName):
     shutil.copy(sourcePath, images_dir_path / newFileName)
+
+
+def saveCollections(collection_list):
+    with open(collections_file_path, "w", encoding="utf-8") as file:
+        file.write(json.dumps(collection_list))
