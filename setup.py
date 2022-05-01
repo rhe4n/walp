@@ -1,20 +1,20 @@
 from setuptools import setup
-import pathlib
 
-here = pathlib.Path(__file__).parent.resolve()
 
 setup(
-    name='walp',
-    version='0.0.1',
+    name="walp",
+    version="0.0.1.dev1",
     description="A command-line wallpaper manager",
     url="https://github.com/rhe4n/walp",
+    author="rhean",
+    author_email="rheandhont@gmail.com",
     packages=["walp"],
     install_requires=[
-        "Click"
+        "Click>=8.0.3",
     ],
     entry_points={
-        'console_scripts': [
-            'collection = src/walp:collection',
+        "console_scripts": [
+            "walp = walp:collection",
         ],
     },
 )
