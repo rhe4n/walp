@@ -54,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![](/home/rhean/files/dev/walp/docs/images/banner.png)](https://github.com/rhe4n/walp)
+[![](docs/images/banner.png)](https://github.com/rhe4n/walp)
 
 Wallpapers are surely a big thing to consider: they set the tone for your desktop and are the base of any and all custom aesthetics and rices.
 
