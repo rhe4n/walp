@@ -164,5 +164,5 @@ Project Link: [https://github.com/rhe4n/walp](https://github.com/rhe4n/walp)
 [issues-shield]: https://img.shields.io/github/issues/rhe4n/walp.svg?style=for-the-badge
 [issues-url]: https://github.com/rhe4n/walp/issues
 [license-shield]: https://img.shields.io/github/license/rhe4n/walp.svg?style=for-the-badge
-[license-url]: https://github.com/rhe4n/walp/blob/master/LICENSE.txt
+[license-url]: https://github.com/rhe4n/walp/blob/master/LICENSE
 [product-screenshot]: docs/images/screenshot.png
