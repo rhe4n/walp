@@ -13,15 +13,6 @@ def importImage(rawpath):
         return handleimg(coolpath)
 
 
-def handledir(path):
-    files = os.listdir(path)
-    retcode = 0
-    for i in files:
-        if handleimg(Path(i)) != 0:
-            retcode = 1
-    return retcode
-
-
 def handleimg(path):
     if checkisimage(path):
         storage.saveImage(path, os.path.basename(path))
@@ -37,3 +28,12 @@ def checkisimage(path):
         return True
     except PIL.UnidentifiedImageError:
         return False
+
+
+def is_stashed(name):
+    """checks if this image is loaded in the stash"""
+    directory = Path(storage.images_dir_path)
+    for i in os.listdir(directory):
+        if i == name:
+            return True
+    return False

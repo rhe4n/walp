@@ -73,3 +73,8 @@ def saveImage(sourcePath, newFileName):
 def saveCollections(collection_list):
     with open(collections_file_path, "w", encoding="utf-8") as file:
         file.write(json.dumps(collection_list))
+
+
+def savePresets(preset_list):
+    with open(presets_file_path, "w", encoding="utf-8") as file:
+        file.write(json.dumps(preset_list))
