@@ -1,9 +1,12 @@
 <div id="top"></div>
 
+<div align="center">
+
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
 
+</div>
 
 <h3 align="center">Walp</h3>
 
