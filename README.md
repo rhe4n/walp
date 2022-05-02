@@ -56,7 +56,7 @@
 
 <div align="center">
   
-[![](docs/images/banner.png)](https://github.com/rhe4n/walp)
+[![](docs/images/screenshot.png)](https://github.com/rhe4n/walp)
   
 </div>
 
@@ -78,22 +78,15 @@ This is an example of how to list things you need to use the software and how to
 * python: if you haven't already, install python from your distro's package manager
 * feh: see above
 
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/rhe4n/walp.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+This is a placeholder while I figure out whether my python package is working.
+
+In the meantime, you can clone the repo and run:
+```sh
+# pip install .
+```
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
