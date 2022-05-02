@@ -78,3 +78,7 @@ def saveCollections(collection_list):
 def savePresets(preset_list):
     with open(presets_file_path, "w", encoding="utf-8") as file:
         file.write(json.dumps(preset_list))
+
+
+def build_path_for_image(stashed_image_name):
+    return images_dir_path / stashed_image_name

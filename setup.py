@@ -12,7 +12,9 @@ setup(
     install_requires=[
         "click>=8.0.3",
         "appdirs>=1.4.4",
-        "pillow>=9.1.0"
+        "pillow>=9.1.0",
+        "xcffib>=0.11.1",
+        "cairocffi>=1.3.0"
     ],
     entry_points={
         "console_scripts": [

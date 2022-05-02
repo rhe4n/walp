@@ -1,3 +1,5 @@
+import collections
+
 from walp.utils import storage
 from walp.scripts import image as img
 from walp.scripts import engine as engine
@@ -16,8 +18,12 @@ def list_preset_names():
 
 def use_preset(name):
     preset = find_preset(name)
+    pairs = preset["assignation"]
 
-    pass
+    ordered_pairs = collections.OrderedDict(sorted(pairs.items()))
+
+    engine.set_monitor_background_pairs(ordered_pairs)
+    return 0
 
 
 def create_preset(name):
