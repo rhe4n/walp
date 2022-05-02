@@ -8,7 +8,7 @@ setup(
     url="https://github.com/rhe4n/walp",
     author="rhean",
     author_email="rheandhont@gmail.com",
-    packages=["walp"],
+    packages=["walp", "walp.scripts", "walp.utils"],
     install_requires=[
         "click>=8.0.3",
         "appdirs>=1.4.4",
