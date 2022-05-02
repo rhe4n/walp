@@ -74,7 +74,9 @@ def set_image_monitor(preset_name, img_name, monitor_number):
     elif monitor_number < 0:
         return 3
     else:
-        selected["assignation"][monitor_number] = img_name
+        print(selected["assignation"])
+        selected["assignation"][str(monitor_number)] = img_name
+        print(selected["assignation"])
         storage.savePresets(preset_list)
         return 0
 
