@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="walp",
-    version="0.0.1",
+    version="0.0.3",
     description="A command-line wallpaper manager",
     url="https://github.com/rhe4n/walp",
     author="rhean",
