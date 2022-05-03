@@ -106,11 +106,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Abandon feh
-- [ ] Collections support
-- [ ] Iteration support
+- [ ] v1.0
+  - [ ] Collections support
+  - [ ] State tracking
+  - [ ] Document usage examples
+  - [ ] Document installation
 
-See the [open issues](https://github.com/rhe4n/walp/issues) for a full list of proposed features (and known issues).
+See the [issues](https://github.com/rhe4n/walp/issues) page for a full list of proposed features and known issues.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
