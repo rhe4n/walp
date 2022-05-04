@@ -31,21 +31,16 @@ def init():
 
     if not os.path.exists(state_file_path):
         from walp.utils import defaults
-        print(json.dumps(defaults.initial_state()))
         with open(state_file_path, "w", encoding="utf-8") as file:
             file.write(json.dumps(defaults.initial_state()))
 
     if not os.path.exists(collections_file_path):
-        # os.mknod(collections_data_path)
-        emptylist = []
         with open(collections_file_path, "w", encoding="utf-8") as file:
-            file.write(json.dumps(emptylist))
+            file.write(json.dumps([]))
 
     if not os.path.exists(presets_file_path):
-        # os.mknod(presets_data_path)
-        emptylist = []
         with open(presets_file_path, "w", encoding="utf-8") as file:
-            file.write(json.dumps(emptylist))
+            file.write(json.dumps([]))
 
 
 def loadJSONData(path):
