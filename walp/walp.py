@@ -16,7 +16,7 @@ def showStatus():
     if s["current"] == "none":
         click.echo("Status: Inactive")
     else:
-        click.echo(f"Using {s['type']} '{s['current']}'")
+        click.echo(f"Using {s['type']} '{s['current']}'.")
 
 
 @cli.command(name="import")
