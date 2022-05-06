@@ -1,5 +1,5 @@
 from walp.utils import storage
-
+from walp.scripts import state
 
 class Collection(object):
     def __init__(self, name):
@@ -16,6 +16,7 @@ def list_collection_names():
 
 
 def use_collection(name):
+    state.setState(name, "collection")
     pass
 
 
