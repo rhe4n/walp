@@ -16,14 +16,14 @@ def showStatus():
     if s["current"] == "none":
         click.echo("Status: Inactive")
     else:
-        click.echo(f"Using {s['type']} '{s['current']}'")
+        click.echo(f"Using {s['type']} '{s['current']}'.")
 
 
 @cli.command(name="import")
 @click.argument("input", type=click.Path(exists=True), nargs=-1)
-def importFileOrDir(input):
-    for image in input:
-        if img.importImage(image) > 0:
+def importFileOrDir(inp):
+    for an_image in inp:
+        if img.importImage(an_image) > 0:
             click.echo("Not imported (not an image)")
         else:
             click.echo("Wallpaper loaded correctly.")
@@ -140,3 +140,13 @@ def preset_set_image_monitor(preset_title, image_title, monitor_number):
         click.echo("Error: Monitor needs to be greater than zero.")
     else:
         click.echo("Unknown error.")
+
+
+@cli.group(name="image")
+def image():
+    pass
+
+
+@image.command(name="list")
+def listImages():
+    pass

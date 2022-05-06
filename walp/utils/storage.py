@@ -49,12 +49,13 @@ def loadJSONData(path):
     return data
 
 
+def saveJSONData(path, json_object):
+    with open(path, "w", encoding="utf-8") as file:
+        file.write(json.dumps(json_object))
+
+
 def loadCollections():
     return loadJSONData(collections_file_path)
-
-
-def loadState():
-    return loadJSONData(state_file_path)
 
 
 def loadPresets():
@@ -66,14 +67,20 @@ def saveImage(sourcePath, newFileName):
 
 
 def saveCollections(collection_list):
-    with open(collections_file_path, "w", encoding="utf-8") as file:
-        file.write(json.dumps(collection_list))
+    saveJSONData(collections_file_path, collection_list)
 
 
 def savePresets(preset_list):
-    with open(presets_file_path, "w", encoding="utf-8") as file:
-        file.write(json.dumps(preset_list))
+    saveJSONData(presets_file_path, preset_list)
 
 
 def build_path_for_image(stashed_image_name):
     return images_dir_path / stashed_image_name
+
+
+def loadState():
+    return loadJSONData(state_file_path)
+
+
+def saveState(state):
+    saveJSONData(state_file_path, state)

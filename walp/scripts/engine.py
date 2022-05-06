@@ -1,6 +1,5 @@
 from walp.utils import storage
 import subprocess
-from pywal import wallpaper
 
 
 def set_monitor_background_pairs(pairs):

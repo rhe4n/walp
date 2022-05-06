@@ -3,6 +3,7 @@ import collections
 from walp.utils import storage
 from walp.scripts import image as img
 from walp.scripts import engine as engine
+from walp.scripts import state as state
 
 
 class Preset(object):
@@ -23,6 +24,8 @@ def use_preset(name):
     ordered_pairs = collections.OrderedDict(sorted(pairs.items()))
 
     engine.set_monitor_background_pairs(ordered_pairs)
+
+    state.setState(name, "preset")
     return 0
 
 
